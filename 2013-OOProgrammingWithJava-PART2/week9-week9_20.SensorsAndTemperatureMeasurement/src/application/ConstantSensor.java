@@ -11,7 +11,6 @@ package application;
  */
 public class ConstantSensor implements Sensor{
     private int value;
-    private boolean online = true;
 
     public ConstantSensor(int value) {
         this.value = value;
@@ -26,7 +25,7 @@ public class ConstantSensor implements Sensor{
 
     @Override
     public boolean isOn() {
-        return online;
+        return true;
     }
     
     @Override

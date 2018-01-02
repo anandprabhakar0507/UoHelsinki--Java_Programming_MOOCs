@@ -14,14 +14,19 @@ import java.util.List;
  */
 public class AverageSensor implements Sensor{
     private List<Sensor> sensors;
-    private boolean online = false;
-
+    private List<Integer> readings;
+    
+    public AverageSensor() {
+        this.sensors = new ArrayList<Sensor>();
+        this.readings = new ArrayList<Integer>();
+    }
+    
     public void addSensor(Sensor additional){
         sensors.add(additional);
     }
     
-    public AverageSensor() {
-        this.sensors = new ArrayList<Sensor>();
+    public List<Integer> readings(){
+        return readings;
     }
     
     @Override
@@ -48,7 +53,18 @@ public class AverageSensor implements Sensor{
 
     @Override
     public int measure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int sum = 0;
+        if (!isOn())
+            throw new IllegalStateException("Average Sensor is offline.");
+        if (sensors.isEmpty())
+            throw new IllegalStateException("Average Sensor has no sensors.");
+        for (Sensor s : sensors)
+            if (s.isOn())
+                sum += s.measure();
+        int avg = sum/sensors.size();
+        readings.add(avg);
+        return avg;
     }
+    
     
 }

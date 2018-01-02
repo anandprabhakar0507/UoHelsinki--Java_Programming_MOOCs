@@ -4,10 +4,11 @@ import java.io.File;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // test your code here
 
-        File file = new File("src/shortList.txt");
+        WordInspection s = new WordInspection( new File("src/shortList.txt") );
+        System.out.println(s.wordsWhichContainAllVowels()); 
         // all words are in file src/wordList.txt
 
     }

@@ -13,11 +13,10 @@ import java.util.Random;
  */
 public class Thermometer implements Sensor{
     private boolean online = false;
-    private int value;
     private Random randomizer = new Random();
     
-    public Thermometer(int value) {
-        this.value = value;
+    public Thermometer() {
+        ;
     }
     
     @Override
