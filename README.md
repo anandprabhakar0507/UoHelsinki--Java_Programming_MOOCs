@@ -1,6 +1,6 @@
 # UoHelsinki--Java_Programming_MOOCs
 
-Developed on Netbeans 8.2
+Developed on Netbeans 8.2, JDK 8.
 
 Notable exercises that required independent work (independent as in they didn't walk me through how to create the project)
  * [Week  7, exercise  8:  Airport](https://github.com/nnard1616/UoHelsinki--Java_Programming_MOOCs/tree/master/2013-OOProgrammingWithJava-PART2/week7-week7_08.Airport/src)
