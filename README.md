@@ -1,5 +1,9 @@
 # UoHelsinki--Java_Programming_MOOCs
 
+![Part 1 Certificate](https://i.imgur.com/U5oRuDu.png)
+
+![Part 2 Certificate](https://i.imgur.com/My14Pm1.png)
+
 Developed on Netbeans 8.2, JDK 8.
 
 Notable exercises that required independent work (independent as in they didn't walk me through how to create the project)
